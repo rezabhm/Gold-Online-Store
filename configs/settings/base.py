@@ -25,6 +25,11 @@ SECRET_KEY = 'django-insecure-y!km6w1v(+)cw-fr*jei06%g$dxe^-h-s5lki$5u4b5q^3&b8v
 # Application definition
 
 INSTALLED_APPS = [
+
+    # custom app
+    'apps.core',
+    'apps.gold_online_store',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
