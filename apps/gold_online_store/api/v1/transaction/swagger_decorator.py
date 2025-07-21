@@ -1,6 +1,6 @@
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from apps.gold_online_store.serializers import GoldSaleTransactionSerializer, GoldPurchaseTransactionSerializer
+from apps.gold_online_store.serializers.transaction import GoldSaleTransactionSerializer, GoldPurchaseTransactionSerializer
 
 # GoldSaleTransactionAdminAPIView Decorators
 admin_create_gold_sale_transaction_swagger = swagger_auto_schema(

@@ -1,18 +1,10 @@
+from django.utils import timezone
 from rest_framework import serializers
 from django.utils.translation import gettext_lazy as _
 
 from apps.core.serializers import CustomUserSerializer
-from apps.gold_online_store.models.transaction import GoldPrice, GoldSaleTransaction, GoldPurchaseTransaction
-
-
-class GoldPriceSerializer(serializers.ModelSerializer):
-    """
-    Serializer for GoldPrice model to handle gold price data in transactions.
-    """
-    class Meta:
-        model = GoldPrice
-        fields = ['id', 'sale_price', 'date', 'active']
-        read_only_fields = ['id', 'date', 'active']
+from apps.gold_online_store.models.transaction import GoldSaleTransaction, GoldPurchaseTransaction
+from apps.gold_online_store.serializers.gold import GoldPriceSerializer
 
 
 class GoldTransactionSerializer(serializers.ModelSerializer):

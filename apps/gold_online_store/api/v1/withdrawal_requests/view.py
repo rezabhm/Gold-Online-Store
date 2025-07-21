@@ -6,9 +6,9 @@ from rest_framework import mixins, filters
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.exceptions import PermissionDenied, ValidationError
 
-from apps.gold_online_store.models.gold import MoneyWithdrawalRequest, GoldWithdrawalRequest
-from apps.gold_online_store.serializers import MoneyWithdrawalRequestSerializer, GoldWithdrawalRequestSerializer
-from apps.gold_online_store.api.v1.gold.swagger_decorator import (
+from apps.gold_online_store.models.withdrawal_requests import MoneyWithdrawalRequest, GoldWithdrawalRequest
+from apps.gold_online_store.serializers.withdrawal_requests import MoneyWithdrawalRequestSerializer, GoldWithdrawalRequestSerializer
+from apps.gold_online_store.api.v1.withdrawal_requests.swagger_decorator import (
     admin_create_money_withdrawal_request_swagger,
     admin_retrieve_money_withdrawal_request_swagger,
     admin_update_money_withdrawal_request_swagger,

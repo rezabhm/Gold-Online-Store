@@ -1,6 +1,6 @@
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from apps.gold_online_store.serializers import MoneyWithdrawalRequestSerializer, GoldWithdrawalRequestSerializer
+from apps.gold_online_store.serializers.withdrawal_requests import MoneyWithdrawalRequestSerializer, GoldWithdrawalRequestSerializer
 
 # MoneyWithdrawalRequestAdminAPIView Decorators
 admin_create_money_withdrawal_request_swagger = swagger_auto_schema(

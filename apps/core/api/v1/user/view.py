@@ -53,7 +53,6 @@ class UserAPIView(
     GenericViewSet,
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
-    mixins.PartialUpdateModelMixin,
 ):
     """
     Authenticated user API ViewSet for viewing and updating own user record.

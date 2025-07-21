@@ -1,6 +1,6 @@
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from apps.gold_online_store.serializers import WalletSerializer, GoldPriceSerializer
+from apps.gold_online_store.serializers.gold import WalletSerializer, GoldPriceSerializer
 
 # WalletAdminAPIView Decorators
 admin_create_wallet_swagger = swagger_auto_schema(

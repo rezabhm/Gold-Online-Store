@@ -49,7 +49,6 @@ class PaymentTransaction(models.Model):
         indexes = [
             models.Index(fields=['payment_date']),
             models.Index(fields=['status']),
-            models.Index(fields=['payment_id']),
         ]
 
     def __str__(self):

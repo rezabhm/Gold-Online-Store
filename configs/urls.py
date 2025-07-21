@@ -44,6 +44,6 @@ urlpatterns = [
 
     # api version 1
     path('api/v1/core/', include('apps.core.api.v1.routers')),
-    path('api/v1/gold-online-shop/', include('apps.gold_online_shop.api.v1.routers')),
+    path('api/v1/gold-online-shop/', include('apps.gold_online_store.api.v1.routers')),
 
 ]

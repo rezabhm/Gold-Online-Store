@@ -7,7 +7,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.exceptions import PermissionDenied, ValidationError
 
 from apps.gold_online_store.models.gold import Wallet, GoldPrice
-from apps.gold_online_store.serializers import WalletSerializer, GoldPriceSerializer
+from apps.gold_online_store.serializers.gold import WalletSerializer, GoldPriceSerializer
 from apps.gold_online_store.api.v1.gold.swagger_decorator import (
     admin_create_wallet_swagger,
     admin_retrieve_wallet_swagger,
