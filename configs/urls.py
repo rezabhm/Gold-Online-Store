@@ -25,9 +25,9 @@ schema_view = get_schema_view(
       title="Gold Online Shop",
       default_version='v1',
       description="api docs for Gold Online Shop",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="your_email@example.com"),
-      license=openapi.License(name="BSD License"),
+      # terms_of_service="https://www.google.com/policies/terms/",
+      # contact=openapi.Contact(email="your_email@example.com"),
+      # license=openapi.License(name="BSD License"),
    ),
    public=True,
    permission_classes=[permissions.AllowAny],
@@ -41,6 +41,8 @@ urlpatterns = [
     # swagger documentation
     path('api-docs/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('api-docs/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('swagger.json', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path('swagger.yaml', schema_view.without_ui(cache_timeout=0), name='schema-yaml'),
 
     # api version 1
     path('api/v1/core/', include('apps.core.api.v1.routers')),
