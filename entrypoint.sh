@@ -9,9 +9,7 @@ python manage.py collectstatic --noinput
 echo "📦 Applying migrations ..."
 python manage.py makemigrations
 python manage.py makemigrations core
-python manage.py makemigrations lazer_area
-python manage.py makemigrations payment
-python manage.py makemigrations reserve
+python manage.py makemigrations gold_online_store
 
 python manage.py migrate
 
